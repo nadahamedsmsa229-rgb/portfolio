@@ -1,0 +1,1112 @@
+/* =========================================
+   NADA HAMED — SOCIAL MEDIA SUPPORT
+   WARM LUXURY / JAGUAR INSPIRED THEME
+========================================= */
+
+:root {
+    --background: #f4efe7;
+    --background-soft: #ebe3d7;
+    --card: #fbf8f3;
+
+    --text: #211914;
+    --secondary-text: #74685d;
+
+    --espresso: #211914;
+    --brown: #4a3427;
+    --bronze: #9a7049;
+    --gold: #b28a5b;
+
+    --border: #d8c9b7;
+
+    --dark: #17110e;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: var(--bronze);
+    color: white;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    padding: 26px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(244, 239, 231, 0.92);
+    border-bottom: 1px solid rgba(154, 112, 73, 0.18);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--bronze);
+}
+
+.nav-links {
+    display: flex;
+    gap: 34px;
+}
+
+.nav-links a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--bronze);
+}
+
+.nav-button {
+    text-decoration: none;
+
+    background: var(--espresso);
+    color: #fffaf3;
+
+    padding: 12px 23px;
+    border-radius: 2px;
+
+    font-size: 13px;
+    letter-spacing: 0.5px;
+
+    border: 1px solid var(--espresso);
+
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: transparent;
+    color: var(--espresso);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 88vh;
+
+    padding: 90px 7%;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+
+    align-items: center;
+    gap: 80px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(178, 138, 91, 0.16),
+            transparent 28%
+        ),
+        var(--background);
+}
+
+
+/* Decorative line */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 38%;
+    height: 1px;
+
+    background: var(--bronze);
+
+    top: 15%;
+    left: 7%;
+
+    opacity: 0.5;
+}
+
+
+/* Decorative star */
+
+.hero::after {
+    content: "✦";
+
+    position: absolute;
+
+    top: 11%;
+    left: 44%;
+
+    color: var(--bronze);
+
+    font-size: 28px;
+}
+
+
+/* HERO TEXT */
+
+.hero-left {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: var(--bronze);
+
+    font-weight: 600;
+
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(52px, 6vw, 88px);
+
+    line-height: 1.03;
+
+    font-weight: 600;
+
+    max-width: 900px;
+}
+
+.hero h1 span,
+.section-title span,
+.about h2 span,
+.contact h2 span {
+    color: var(--bronze);
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    margin-top: 32px;
+
+    color: var(--secondary-text);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    margin-top: 38px;
+
+    display: flex;
+
+    gap: 14px;
+}
+
+.primary-btn {
+    display: inline-block;
+
+    background: var(--espresso);
+
+    color: #fffaf3;
+
+    text-decoration: none;
+
+    padding: 15px 25px;
+
+    border-radius: 2px;
+
+    font-size: 13px;
+
+    letter-spacing: 0.4px;
+
+    border: 1px solid var(--espresso);
+
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: transparent;
+
+    color: var(--espresso);
+}
+
+.secondary-btn {
+    display: inline-block;
+
+    color: var(--espresso);
+
+    text-decoration: none;
+
+    padding: 15px 25px;
+
+    border-radius: 2px;
+
+    border: 1px solid var(--border);
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    border-color: var(--bronze);
+    color: var(--bronze);
+}
+
+
+/* =========================================
+   HERO CARD
+========================================= */
+
+.hero-right {
+    position: relative;
+}
+
+.hero-card {
+    background: var(--dark);
+
+    color: #f5eadc;
+
+    padding: 38px;
+
+    min-height: 510px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 0;
+
+    box-shadow:
+        25px 25px 0 rgba(154, 112, 73, 0.12);
+}
+
+
+/* Gold curved decoration */
+
+.hero-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(178, 138, 91, 0.5);
+
+    border-radius: 50%;
+
+    top: -220px;
+    right: -250px;
+}
+
+
+/* Jaguar-inspired subtle pattern */
+
+.hero-card::after {
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 25px;
+    right: 35px;
+
+    font-size: 70px;
+
+    color: rgba(178, 138, 91, 0.35);
+}
+
+.card-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #c7b39c;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    background: var(--gold);
+
+    border-radius: 50%;
+}
+
+.card-content {
+    padding-top: 100px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.mini-text {
+    font-size: 11px;
+
+    color: var(--gold);
+
+    letter-spacing: 3px;
+}
+
+.hero-card h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 52px;
+
+    margin-top: 18px;
+
+    line-height: 1.05;
+
+    font-weight: 500;
+}
+
+.mini-list {
+    margin-top: 55px;
+
+    display: grid;
+
+    gap: 15px;
+
+    color: #cfc2b4;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section {
+    padding: 125px 7%;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-label::after {
+    content: "";
+
+    width: 60px;
+    height: 1px;
+
+    background: var(--bronze);
+
+    opacity: 0.6;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 5vw, 70px);
+
+    max-width: 900px;
+
+    line-height: 1.08;
+
+    margin-bottom: 70px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+    background: var(--background);
+}
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 110px;
+
+    align-items: start;
+}
+
+.about h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(55px, 6vw, 82px);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+}
+
+.about-text {
+    color: var(--secondary-text);
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    padding-top: 10px;
+}
+
+.about-text p {
+    margin-bottom: 28px;
+}
+
+.about-text strong {
+    color: var(--espresso);
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services {
+    background: var(--background-soft);
+
+    position: relative;
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.service-card {
+    background: rgba(251, 248, 243, 0.8);
+
+    padding: 38px;
+
+    min-height: 270px;
+
+    border: 1px solid rgba(154, 112, 73, 0.2);
+
+    border-radius: 0;
+
+    position: relative;
+
+    transition: 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    background: var(--dark);
+
+    color: #f6ecdf;
+
+    border-color: var(--dark);
+}
+
+.service-number {
+    color: var(--bronze);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.service-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    margin: 45px 0 16px;
+
+    font-weight: 500;
+}
+
+.service-card p {
+    color: var(--secondary-text);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+.service-card:hover p {
+    color: #cfc2b4;
+}
+
+
+/* =========================================
+   HOW I HELP / SUPPORT
+========================================= */
+
+.support {
+    background: var(--background);
+}
+
+.support-item {
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 70px;
+
+    padding: 65px 0;
+
+    border-top: 1px solid var(--border);
+
+    transition: 0.3s;
+}
+
+.support-item:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+.support-item:hover {
+    padding-left: 15px;
+}
+
+.support-number {
+    font-family: "Playfair Display", serif;
+
+    font-size: 55px;
+
+    color: var(--bronze);
+
+    font-style: italic;
+}
+
+.support-small-title {
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+
+    color: var(--bronze);
+
+    margin-bottom: 22px;
+}
+
+.support-info h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    max-width: 750px;
+
+    line-height: 1.1;
+
+    font-weight: 500;
+}
+
+.support-info > p:last-child {
+    margin-top: 28px;
+
+    max-width: 650px;
+
+    color: var(--secondary-text);
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   WHAT TO EXPECT
+========================================= */
+
+.expect {
+    background: var(--dark);
+
+    color: #f6ecdf;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.expect::before {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    border: 1px solid rgba(178, 138, 91, 0.25);
+
+    border-radius: 50%;
+
+    top: -450px;
+    right: -250px;
+}
+
+.expect .section-title {
+    color: #f6ecdf;
+
+    position: relative;
+}
+
+.expect .section-label {
+    color: var(--gold);
+}
+
+.expect-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 60px;
+
+    position: relative;
+}
+
+.expect-item {
+    border-top: 1px solid rgba(178, 138, 91, 0.35);
+
+    padding-top: 28px;
+}
+
+.expect-item h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 34px;
+
+    margin-bottom: 18px;
+
+    font-weight: 500;
+}
+
+.expect-item p {
+    color: #c9bbac;
+
+    line-height: 1.8;
+
+    max-width: 470px;
+}
+
+
+/* =========================================
+   WORKFLOW
+========================================= */
+
+.workflow {
+    background: var(--background);
+}
+
+.workflow-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 0;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.workflow-card {
+    padding: 40px 30px;
+
+    min-height: 330px;
+
+    border-right: 1px solid var(--border);
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.workflow-card:last-child {
+    border-right: none;
+}
+
+.workflow-card:hover {
+    background: var(--background-soft);
+}
+
+.workflow-card span {
+    color: var(--bronze);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.workflow-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    margin: 70px 0 18px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+.workflow-card p {
+    color: var(--secondary-text);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(178, 138, 91, 0.18),
+            transparent 35%
+        ),
+        var(--background-soft);
+
+    position: relative;
+}
+
+.contact::before {
+    content: "✦";
+
+    display: block;
+
+    color: var(--bronze);
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+}
+
+.contact-small {
+    letter-spacing: 3px;
+
+    font-size: 11px;
+
+    color: var(--bronze);
+
+    margin-bottom: 22px;
+}
+
+.contact h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 6vw, 88px);
+
+    line-height: 1.05;
+
+    max-width: 950px;
+
+    margin: auto;
+
+    font-weight: 500;
+}
+
+.contact-description {
+    max-width: 600px;
+
+    margin: 35px auto;
+
+    color: var(--secondary-text);
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+.contact-links {
+    margin-top: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+}
+
+.contact-links a {
+    color: var(--espresso);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    border-bottom: 1px solid transparent;
+
+    padding-bottom: 5px;
+
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    color: var(--bronze);
+
+    border-color: var(--bronze);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: var(--dark);
+
+    color: #c9bbac;
+
+    padding: 28px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding-top: 100px;
+    }
+
+    .hero::before,
+    .hero::after {
+        display: none;
+    }
+
+    .hero-right {
+        max-width: 600px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workflow-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workflow-card:nth-child(2) {
+        border-right: none;
+    }
+
+    .workflow-card:nth-child(3) {
+        border-top: 1px solid var(--border);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 85px 7%;
+    }
+
+    .navbar {
+        padding: 20px 7%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-button {
+        padding: 10px 15px;
+
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 75px 7% 85px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .hero-card {
+        min-height: 430px;
+
+        padding: 28px;
+    }
+
+    .hero-card h2 {
+        font-size: 43px;
+    }
+
+    .card-content {
+        padding-top: 75px;
+    }
+
+    .about h2 {
+        font-size: 58px;
+    }
+
+    .services-grid,
+    .expect-grid,
+    .workflow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+
+    .support-item {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 50px 0;
+    }
+
+    .support-number {
+        font-size: 42px;
+    }
+
+    .support-info h3 {
+        font-size: 36px;
+    }
+
+    .workflow-card {
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
+
+        min-height: auto;
+    }
+
+    .workflow-card h3 {
+        margin-top: 45px;
+    }
+
+    .contact-links {
+        gap: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
